@@ -29,6 +29,16 @@ body {
     font-weight: 700;
 }
 
+h1.logoname {
+    text-shadow: 5px 5px #000;
+	color:#fff;
+}
+
+.text-vertical-center h1 {
+    color: #fff;
+    text-shadow: 5px 5px #333;
+}
+
 /* Custom Button Styles */
 
 .btn-dark {
