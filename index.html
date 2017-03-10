@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Caring Minds Foundation</title>
+    <title>Cendyn Charity Foundation</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -28,6 +28,23 @@
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
+	
+	<style>
+	.hideCallout{
+		display:none;
+		background: none !important;
+		text-align: center;
+		color: #000;
+		padding-top: 50px;
+		display: inline-block;
+	}
+	
+	.hideCallout{
+		display:none;
+		
+	}
+	
+	</style>
 
 </head>
 
@@ -62,7 +79,9 @@
     <!-- Header -->
     <header id="top" class="header">
         <div class="text-vertical-center">
-            <h1>Caring Minds Foundation</h1>
+            <h1>Cendyn Charity Foundation
+			<br><img src="img/logo.png">
+			</h1>
             <h3>We are one, united togther!</h3>
             <br>
             <a href="#about" class="btn btn-dark btn-lg">Find Out More</a>
@@ -93,7 +112,7 @@
                     <hr class="small">
                     <div class="row">
                         <div class="col-md-3 col-sm-6">
-                            <div class="service-item">
+                            <div class="service-item service">
                                 <span class="fa-stack fa-4x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
                                 <i class="fa fa-cloud fa-spin fa-stack-1x text-primary"></i>
@@ -106,10 +125,10 @@
                             </div>
                         </div>
                         <div class="col-md-3 col-sm-6">
-                            <div class="service-item">
+                            <div class="service-item donation">
                                 <span class="fa-stack fa-4x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-compass fa-stack-1x text-primary"></i>
+                                <i class="fa fa-compass fa-spin fa-stack-1x text-primary"></i>
                             </span>
                                 <h4>
                                     <strong>Donation</strong>
@@ -119,10 +138,10 @@
                             </div>
                         </div>
                         <div class="col-md-3 col-sm-6">
-                            <div class="service-item">
+                            <div class="service-item volunteer">
                                 <span class="fa-stack fa-4x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-flask fa-stack-1x text-primary"></i>
+                                <i class="fa fa-flask fa-spin fa-stack-1x text-primary"></i>
                             </span>
                                 <h4>
                                     <strong>Volunteer</strong>
@@ -132,10 +151,10 @@
                             </div>
                         </div>
                         <div class="col-md-3 col-sm-6">
-                            <div class="service-item">
+                            <div class="service-item charity">
                                 <span class="fa-stack fa-4x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-users fa-stack-1x text-primary"></i>
+                                <i class="fa fa-users fa-spin fa-stack-1x text-primary"></i>
                             </span>
                                 <h4>
                                     <strong>Charities & Fundraising </strong>
@@ -155,9 +174,14 @@
     </section>
 
     <!-- Callout -->
+	  <aside class="callout hideCallout">
+        <div class="text-vertical-center">
+            <h1>Some information</h1>
+        </div>
+    </aside>
     <aside class="callout">
         <div class="text-vertical-center">
-            <h1>Vertically Centered Text</h1>
+            <h1>Upcoming Events <br/> Coming Soon!</h1>
         </div>
     </aside>
 
@@ -172,21 +196,14 @@
                         <div class="col-md-6">
                             <div class="portfolio-item">
                                 <a href="#">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-1.jpg">
+                                    <img class="img-portfolio img-responsive" src="https://kindnessblogdotcom1.files.wordpress.com/2015/04/caring_hands_2-wide.jpg?w=1200">
                                 </a>
                             </div>
                         </div>
                         <div class="col-md-6">
                             <div class="portfolio-item">
                                 <a href="#">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-2.jpg">
-                                </a>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="portfolio-item">
-                                <a href="#">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-3.jpg">
+                                    <img class="img-portfolio img-responsive" src="http://usegaleforce.com/wp-content/uploads/2012/10/concert.jpg">
                                 </a>
                             </div>
                         </div>
@@ -194,6 +211,13 @@
                             <div class="portfolio-item">
                                 <a href="#">
                                     <img class="img-portfolio img-responsive" src="img/portfolio-4.jpg">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="portfolio-item">
+                                <a href="#">
+                                    <img class="img-portfolio img-responsive" src="https://kindnessblogdotcom1.files.wordpress.com/2015/04/caring_hands_2-wide.jpg?w=1200">
                                 </a>
                             </div>
                         </div>
@@ -236,7 +260,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <h4><strong>Caring Minds Foundation</strong>
+                    <h4><strong>Cendyn Charity Foundation</strong>
                     </h4>
                     <p>Address Here
                         <br>Boca Raton, FL 33333</p>
@@ -353,6 +377,38 @@
 	});
 
 });
+
+
+//Manage the callout
+jQuery(function(){
+jQuery(".service > a").on("click",function(e){
+	e.preventDefault();
+	jQuery(".hideCallout").toggle();
+	jQuery(".hideCallout").html("<h4>Below is a list of all our services that we offer</h4><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>");
+});
+
+jQuery(".donation > a").on("click",function(e){
+	e.preventDefault();
+	jQuery(".hideCallout").toggle();
+	jQuery(".hideCallout").html("<img src='https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQfIqWoXG890bsAxvhg4ybo9JsBm3wlsU13SPZV7T9rOqisXbgswg'/>");
+});
+
+
+jQuery(".volunteer> a").on("click",function(e){
+	e.preventDefault();
+	jQuery(".hideCallout").toggle();
+	jQuery(".hideCallout").html("<h3> Sign up now to become a volunteer!<h3><p><form>Your Name:<input type='text' name='your_name' placeholder='Enter Full Name'/><br/><br/>Age:<input type='text' name='your_name' placeholder='Enter Full Name'/><br/><br/>Phone:<input type='text' name='your_name' placeholder='Enter Full Name'/><br/><br/>Email:<input type='text' name='your_name' placeholder='Enter Full Name'/><input type='submit' name='Sign Me Up'/></form><br/></p>");
+});
+
+jQuery(".charity > a").on("click",function(e){
+	e.preventDefault();
+	jQuery(".hideCallout").toggle();
+	jQuery(".hideCallout").html("<h3>Charity & Fundraising Content Coming Soon</h3><p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>");
+
+});
+});
+
+
     </script>
 	
 
